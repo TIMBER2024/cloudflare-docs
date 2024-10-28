@@ -21,17 +21,17 @@ When making requests to [Grok](https://docs.x.ai/docs#getting-started), replace 
 ### cURL
 
 ```bash title="Request"
-curl -X POST https://gateway.ai.cloudflare.com/v1/{account_id}/{gateway_id}/grok/v1/chat/completions \
-  --header 'content-type: application/json' \
-  --header 'Authorization: Bearer {grok_api_token}' \
-  --data '{
-    "model": "grok-beta",
-    "messages": [
-        {
-            "role": "user",
-            "content": "What is Cloudflare?"
-        }
-    ]
+curl https://gateway.ai.cloudflare.com/v1/{account_id}/{gateway_id}/grok/v1/chat/completions \
+--header "content-type: application/json" \
+--header "Authorization: Bearer <GROK_API_TOKEN>" \
+--data '{
+  "model": "grok-beta",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is Cloudflare?"
+    }
+  ]
 }'
 ```
 
